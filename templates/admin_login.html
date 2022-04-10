@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %} Admin Login {% endblock title %}
+
+{% block login %}
+<div class="form-div">
+    <div class="card p-3">
+        <form action="" method="post">
+            <h5 class="text-center border-bottom pb-2"> 
+                Admin Login <i class="fa-solid fa-lock"></i>
+            </h5>
+            {{ form.hidden_tag() }}
+            <fieldset>
+              {{ form.username.label(class='label') }}
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid", placeholder="Username") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control", placeholder="Username") }}
+                {% endif %}
+                {{ form.password.label(class='label') }}
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control is-invalid", placeholder="1234") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="form-control", placeholder="1234") }}
+                {% endif %}
+                <div class="d-grid gap-2 mt-2">
+                    {{ form.button(class="btn", id="bg-btn") }}
+                </div>
+                <div class="m-2">
+                    <small class="text-muted">Forgot Password? <a href="" class="mx-2">Click Here</a></small>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endblock login %}

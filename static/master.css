@@ -1,0 +1,49 @@
+.bg-1 {
+    background-color: #721720;
+}
+.form-width {
+    width: 300px;
+    margin: 5px auto auto auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+/* customized button background */
+#c-btn {
+    background-color: #700712;
+    color: white;
+}
+#form-w {
+    width: 60px;
+    text-align: center;
+    height: 20px;
+}
+#form-width {
+    width: 120px;
+    text-align: center;
+    height: 20px;
+}
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: #e6f3ff;
+    border-radius: 100%;
+}
+.card-h {
+    height: 300px;
+}
+li a {
+    text-decoration: none;
+}
+.width {
+    max-width: 800px;
+    margin: 10px auto auto auto;
+}
+@media only screen and (max-width:330px) {
+    #title {
+        font-size: small;
+    }
+    .canvas {
+       width: 100%;
+    }
+}
