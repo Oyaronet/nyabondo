@@ -17,7 +17,7 @@ def index():
     form = LoginForm()
     if form.validate_on_submit():
         if form.username.data == "oyarojared@nyabondomixed"\
-            and form.password.data == "code":
+            and form.password.data == "code_31":
             setts = engine.connect().execute(select([settings])).first()
             username = form.username.data
             time = datetime.utcnow()
